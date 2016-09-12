@@ -1,0 +1,87 @@
+<!--
+
+* Author: Alan Scully
+* Assignment WE4 Mobile Web Applications, Digital Skills Academy
+* Date : 2016/09/08
+
+-->
+
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+<script src="js/angular.min.js"></script> <!-- link to angular -->
+<link rel="stylesheet" href="css/bootstrap.min.css"> <!--link to bootstrap css-->
+<link rel="stylesheet" href="css/styles.css" /> <!-- link to css file -->
+<script src ="js/scripts.js"> </script> <!-- link to js file -->
+
+<title>  TO DO LIST </title>
+
+</head>
+
+<div class ="container"> <!-- start of container --> 
+
+<body> <!-- start body -->
+
+
+     <div ng-controller="todoCtrl"> <!-- start of controller div -->
+
+           <h1><strong>MY TODO LIST</strong></h1>
+
+<form name ="form" ng-submit="todoAdd()"> <!-- todoAdd function -->
+
+
+
+<input type= "text" style="height:40px";  type="text" ng-model="todoInput" size="40" placeholder="Add New Items"> <!-- styling for text box-->
+
+    <br />
+
+       <br />
+       
+             <table> <!-- start of table -->
+
+                  <tr>
+
+                     <td> <strong><h3>NEW ITEM:</h3> </strong> </td>
+                     
+
+                     <td style="padding-left:20px"> {{ todoInput}} </td> <!-- sync model and view -->
+
+                  </tr>
+
+             </table> <!-- end of table -->
+    
+   
+    <br />
+    
+        <br />
+
+          <input class ="btn-primary btn-lg" type="submit" value="Add New Item">  <!-- button to submit item -->
+
+</form> <!-- end of form -->
+
+     <br />
+
+          <p><strong><h4>LIST OF ITEMS TO BE COMPLETED:</h4></strong> </p> 
+
+     <br />
+
+<div ng-repeat="x in todoList">
+
+    <input type="checkbox" ng-model="x.done"> <span ng-bind="x.todoText"></span> <!-- checkbox for items listed done state-->
+
+</div>
+
+    <br />
+
+        <br />
+
+
+<p><button type="button" class="btn btn-danger btn-sm" ng-click="remove()">Remove Items marked</button></p>
+
+</div>  <!-- end of controller div -->
+
+</div> <!-- end of container-->
+
+</body> <!-- end body -->
+
+</html>  <!-- end html -->

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<widget xmlns   = "http://www.w3.org/ns/widgets"
+    xmlns:gap   = "http://phonegap.com/ns/1.0"
+    id          = "com.phonegap.example"
+    versionCode = "10"
+    version     = "1.0.0" >
+
+<!-- versionCode is optional and Android only -->
+
+  <name>my to do list</name>
+
+  <description>
+      An example for my first list app.
+  </description>
+
+  <author href="https://build.phonegap.com" email="alan.scully@webelevate.ie">
+      Alan Scully
+  </author>
+
+  <content src="index.html" />
+
+     <preference name="orientation"  value="default" />  <!-- all: default means both landscape and portrait are enabled -->
+
+    <preference name="target-device"  value="universal" />   <!-- all: possible values handset, tablet, or universal -->
+
+    <preference name="fullscreen"   value="true" />   <!-- all: hides the status bar at the top of the screen -->
+
+
+</widget>
